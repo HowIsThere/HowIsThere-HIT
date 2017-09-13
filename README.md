@@ -34,6 +34,10 @@ Este documento contém a especificação do projeto do banco de dados <nome do p
       
 ### 3	MINI-MUNDO<br>
 Descrever o mini-mundo. Não deve ser maior do que 30 linhas <br>
+Descobrir como o lugar vai estar no momento em que você em interesse em frequentá-lo é o que o ComoTá faz. O aplicativo reune lugares com base em categorias que podem ser: Praias, shoppings, supermercados, Lojas, Restaurantes, etc., e mostra para o usuário as opções disponíveis mais proximas possiveis de onde ele está no momento, contendo um ranking de avaliação de tal lugar com base em avaliações feitas pelos usuários de tal lugar.
+ 
+ Os lugares são exibidos por ordem de "mais bem avaliado" e ao selecionar um lugar é acessado um bate-papo com informações referentes ao lugar naquele momento, onde os usuários podem postar fotos do lugar, comentar sobre algo que esteja acontecendo no momento e postar sua opiniao sobre o lugar, avaliando se o ambiente está bom ou não.
+ Os usuários podem ser qualquer pessoa que tenha um cadastro no aplicativo ou perfil ativo em alguma rede social. O usuário efetua login e tem acesso as categorias de lugares.
 
 ### 4	RASCUNHOS BÁSICOS DA INTERFACE (MOCKUPS)<br>
 neste ponto a codificação não e necessária, somente as ideias de telas devem ser criadas, o princípio aqui é pensar na criação da interface para identificar possíveis informações a serem armazenadas ou descartadas <br>
