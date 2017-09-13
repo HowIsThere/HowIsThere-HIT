@@ -33,8 +33,11 @@ Integrantes do grupo<br>
 Este documento contém a especificação do projeto do banco de dados <nome do projeto> e motivação da escolha realizada. <br>
       
 ### 3	MINI-MUNDO<br>
-Descrever o mini-mundo. Não deve ser maior do que 30 linhas <br>
-Descobrir como o lugar vai estar no momento em que você em interesse em frequentá-lo é o que o ComoTá faz. O aplicativo reune lugares com base em categorias que podem ser: Praias, shoppings, supermercados, Lojas, Restaurantes, etc., e mostra para o usuário as opções disponíveis mais proximas possiveis de onde ele está no momento, contendo um ranking de avaliação de tal lugar com base em avaliações feitas pelos usuários de tal lugar.
+
+Alguma vez na sua vida você já deve ter ido para algum lugar e chegando lá você viu que não era nada daquilo que você tinha imaginado, seja porque você estava esperando que o lugar estivesse cheio ou então vazio, ou até mesmo esperando que o ambiente estivesse melhor, e por conta disso você teve que procurar em cima da hora outro lugar pra ir, ou até mesmo voltar para casa. Pensando nessas situações que teve-se a ideia de cria o "Como ta?", que é um aplicativo que vai te ajudar a .....
+   
+
+...Descobrir como o lugar vai estar no momento em que você em interesse em frequentá-lo é o que o ComoTá faz. O aplicativo reune lugares com base em categorias que podem ser: Praias, shoppings, supermercados, Lojas, Restaurantes, etc., e mostra para o usuário as opções disponíveis mais proximas possiveis de onde ele está no momento, contendo um ranking de avaliação de tal lugar com base em avaliações feitas pelos usuários de tal lugar.
  
  Os lugares são exibidos por ordem de "mais bem avaliado" e ao selecionar um lugar é acessado um bate-papo com informações referentes ao lugar naquele momento, onde os usuários podem postar fotos do lugar, comentar sobre algo que esteja acontecendo no momento e postar sua opiniao sobre o lugar, avaliando se o ambiente está bom ou não.
  Os usuários podem ser qualquer pessoa que tenha um cadastro no aplicativo ou perfil ativo em alguma rede social. O usuário efetua login e tem acesso as categorias de lugares.
