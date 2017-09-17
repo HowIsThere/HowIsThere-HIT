@@ -54,7 +54,7 @@ Rascunhos de interface em formato .PDF navegável disponível em:
 
 ### 5	MODELO CONCEITUAL<br>
 #### 5.1 NOTACAO ENTIDADE RELACIONAMENTO
-![Alt text](https://github.com/discipbd2/topicos-trabalho/blob/master/sample_MC.png?raw=true "Modelo Conceitual")
+![Alt text](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/conceitual.jpg?raw=true "Modelo Conceitual")
     
      5.2 NOTACAO UML (Caso esteja fazendo a disciplina de Projeto)
 
@@ -67,13 +67,84 @@ Rascunhos de interface em formato .PDF navegável disponível em:
     b) justifique!
 
 #### 5.4 DESCRIÇÃO DOS DADOS 
-    [objeto]: [descrição do objeto]
-    
-    EXEMPLO:
-    CLIENTE: Tabela que armazena as informações relativas ao cliente<br>
-    CPF: campo que armazena o número de Cadastro de Pessoa Física para cada cliente da empresa.<br>
 
+    [Tabela - Cometarios]: Armazena todos os comentários feitos pelos usuários
+      id_comentario: Atributo identificador da tabela
+      texto: Armazena o texto escrito pelo usuário
+      id_postagem: Chave secundária
+      id_pessoa: Chave secundária
+
+      [Tabela - Postagem] - Armazena todas as postagens feitas pelos usuários
+      data: Campo que armazena a data da postagem
+      id_postagem: Atributo identificador da tabela
+      postagem: Armazena o texto escrito pelo usuário
+      id_lugar: Chave secundária
+      id_pessoa: Chave secundária
+
+      [Tabela - Imagem] - Armazena todas as imagens do sistema
+      id_imagem: Atributo identificador da tabela 
+      path: Campo que armazena o caminho da imagem
+      descricao: Campo que armazena a descrição da imagem
+
+      [Tabela - Categoria] - Armazena todas as categorias dos lugares
+      id_categoria: Atributo identificador da tabela
+      descricao: Campo que armazena a descrição da categoria
+      nome_categoria: Campo que armazena o nome da categoria
+      id_pessoa: Chave secundária
+
+      [Tabela - Lugar] - Armazena todos os lugares do sistema
+      long: Campo que armazena a longitude do lugar
+      id_lugar: Atributo identificador da tabela
+      lat: Campo que armazena a latitudo do lugar
+      descricao: Campo que armazena a descricao do lugar
+      nome_lugar: Campo que armazena o nome do lugar
+      id_pessoa: Chave secundária
+      id_categoria: Chave secundária
+
+      [Tabela - Avaliacao] - Armazena todas as avaliações dos usuários
+      id_avaliacao: Atributo identificador da tabela
+      nota: Campo que armazena a nota dada pelo usuário
+      comentario: Campo que armazena o comentário feito pelo usuário
+      id_lugar: Chave secundária
+      id_pessoa: Chave secundaria
+
+      [Tabela - Pessoa] - Armazena os dados das pessoas que usam o sistema
+      cep: Campo que armazena o CEP do usuário
+      bairro: Campo que armazena o bairro do usuário
+      cidade: Campo que armazena o cidade do usuário
+      estado: Campo que armazena o estado do usuário
+      rua: Campo que armazena o rua do usuário
+      numero: Campo que armazena o numero do usuário
+      id_pessoa: Atributo identificador da tabela
+      email: Campo que armazena o CEP do usuário
+      colaboracao: Campo quantos lugares o usuário ajudou a identificar como verdadeiro
+      autenticidade: Campo quantos lugares o usuário identificou como verdade e realmente é verdade
+      senha: Campo que armazena a senha do usuário
+      login: Campo que armazena o login do usuário
+      ativo: Campo que diz se o usuário está ativo ou não
+      nome_pessoa: Campo que armazena o nome do usuário
+      id_imagem_pessoa: Chave secundária
+
+      [Tabela - ImagemPessoa] - Armazena o atributo identificador de pessoa e o atributo identificador dessa imagem relacionado a pessoa
+      id_imagem_pessoa: Atributo identificador
+      id_imagem: Chave secundária
+
+      [Tabela - ImagemCategoria] - Armazena o atributo identificador de categoria e o atributo identificador dessa imagem relacionado a categoria
+      id_imagem_categoria: Atributo identificador
+      id_imagem INTEGER: Chave secundária
+      id_categoria INTEGER: Chave secundária
+
+      [Tabela - ImagemLugar] - Armazena o atributo identificador de Lugar e o atributo identificador dessa imagem relacionado a Lugar
+      id_imagem_lugar: Atributo identificador
+      id_imagem: Chave secundária
+      id_lugar: Chave secundária
+
+      [Tabela -  ImagemPostagem] - Armazena o atributo identificador de Postagem e o atributo identificador dessa imagem relacionado a Postagem
+      id_imagem_postagem: Atributo identificador
+      id_imagem: Chave secundária
+      id_postagem: Chave secundária
 ### 6	MODELO LÓGICO<br>
+![Alt text](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/logico.jpg?raw=true "Modelo Lógico")
 ### 7	MODELO FÍSICO<br>
     CREATE TABLE Imagem (
     id_imagem INTEGER PRIMARY KEY NOT NULL,
