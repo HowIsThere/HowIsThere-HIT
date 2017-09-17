@@ -175,7 +175,7 @@ Rascunhos de interface em formato .PDF navegável disponível em:
     login VARCHAR(20) NOT NULL,
     ativo CHAR(1) NOT NULL,
     nome_pessoa VARCHAR(255) NOT NULL,
-    id_imagem_pessoa VARCHAR(10) NOT NULL,
+    id_imagem_pessoa INTEGER NOT NULL,
     CONSTRAINT FK_id_imagem_pessoa FOREIGN KEY(id_imagem_pessoa) REFERENCES ImagemPessoa (id_imagem_pessoa)
     );
 
@@ -233,7 +233,7 @@ Rascunhos de interface em formato .PDF navegável disponível em:
     CONSTRAINT FK_id_postagem FOREIGN KEY(id_postagem) REFERENCES Postagem (id_postagem)
     );
 
-    CREATE TABLE Cometarios (
+    CREATE TABLE Comentarios (
     id_comentario SERIAL PRIMARY KEY NOT NULL,
     texto TEXT NOT NULL,
     id_postagem INTEGER NOT NULL,
