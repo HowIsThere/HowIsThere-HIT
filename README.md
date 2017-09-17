@@ -49,7 +49,6 @@ O usuário efetua login e tem acesso as categorias de lugares. Em cada menu de c
 
 ### 4	RASCUNHOS BÁSICOS DA INTERFACE (MOCKUPS)<br>
 Rascunhos de interface em formato .PDF navegável disponível em:
-
 ![Alt text](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/HowIsThere.pdf)
 
 
@@ -264,6 +263,9 @@ Rascunhos de interface em formato .PDF navegável disponível em:
         a) inclusão das instruções para criação das tabelas e estruturas de amazenamento do BD
         b) inclusão das instruções de inserção dos dados nas referidas tabelas
         c) inclusão das instruções para execução de outros procedimentos necessários
+        
+        O arquivo com o script para criação de tabelas e inserção dos dados está disponível em:
+        ![Alt text](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Postgres-HIT/criacaoBDHIT.sql)
 
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
 #### 9.1	GERACAO DE DADOS (MÍNIMO DE 1,5 MILHÃO DE REGISTROS PARA PRINCIPAL RELAÇAO)<br>
