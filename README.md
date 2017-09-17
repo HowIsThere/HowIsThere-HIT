@@ -48,7 +48,7 @@ Os usuários podem ser qualquer pessoa que tenha um cadastro no aplicativo ou pe
 O usuário efetua login e tem acesso as categorias de lugares. Em cada menu de categoria é possível ter acesso a lugares previamente cadastrados ou a opção de cadastro de lugar. Os lugares são exibidos por ordem de avaliação onde os que são mais bem avaliados são listados primeiro. Cada lugar possui um nome, o seu respectivo endereço, uma imagem e a avaliação geral. Ao selecionar um lugar é exibido uma timeline onde é possível ter acesso ao conteúdo que as pessoas que também frequentaram aquele lugar postaram. O conteúdo pode ser mensagem de texto com possíveis comentários de avaliação de como está o lugar ou foto do lugar ou das pessoas que estarão lá no momento. Cada postagem é registrada com o nome do perfil do usuário que a realizou bem como data e hora do momento exato da publicação. Ainda sobre as publicações, cada uma conterá opções para alteração da publicação e exclusão.
 
 ### 4	RASCUNHOS BÁSICOS DA INTERFACE (MOCKUPS)<br>
-Rascunhos de interface em formato .PDF navegável disponível em:
+Rascunhos de interface em formato .PDF navegável disponível em:<br>
 ![Alt text](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/HowIsThere.pdf)
 
 
@@ -264,8 +264,8 @@ Rascunhos de interface em formato .PDF navegável disponível em:
         b) inclusão das instruções de inserção dos dados nas referidas tabelas
         c) inclusão das instruções para execução de outros procedimentos necessários
         
-        O arquivo com o script para criação de tabelas e inserção dos dados está disponível em:
-        ![Alt text](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Postgres-HIT/criacaoBDHIT.sql)
+   O arquivo com o script para criação de tabelas e inserção dos dados está disponível em:<br>
+   ![Alt text](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Postgres-HIT/criacaoBDHIT.sql)
 
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
 #### 9.1	GERACAO DE DADOS (MÍNIMO DE 1,5 MILHÃO DE REGISTROS PARA PRINCIPAL RELAÇAO)<br>
