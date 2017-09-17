@@ -27,7 +27,8 @@ DICA:
 # Sumário
 
 ### 1	COMPONENTES<br>
-Integrantes do grupo<br>
+Cassiano Künsch das Neves</br>
+Giseli Siqueira
 
 ### 2	INTRODUÇÃO E MOTIVAÇAO<br>
 Este documento contém a especificação do projeto do banco de dados <nome do projeto> e motivação da escolha realizada. <br>
@@ -69,185 +70,185 @@ Rascunhos de interface em formato .PDF navegável disponível em:
 #### 5.4 DESCRIÇÃO DOS DADOS 
 
     [Tabela - Cometarios]: Armazena todos os comentários feitos pelos usuários
-      id_comentario: Atributo identificador da tabela
-      texto: Armazena o texto escrito pelo usuário
-      id_postagem: Chave secundária
-      id_pessoa: Chave secundária
+        id_comentario: Atributo identificador da tabela
+        texto: Armazena o texto escrito pelo usuário
+        id_postagem: Chave secundária
+        id_pessoa: Chave secundária
 
-      [Tabela - Postagem] - Armazena todas as postagens feitas pelos usuários
-      data: Campo que armazena a data da postagem
-      id_postagem: Atributo identificador da tabela
-      postagem: Armazena o texto escrito pelo usuário
-      id_lugar: Chave secundária
-      id_pessoa: Chave secundária
+    [Tabela - Postagem] - Armazena todas as postagens feitas pelos usuários
+        data: Campo que armazena a data da postagem
+        id_postagem: Atributo identificador da tabela
+        postagem: Armazena o texto escrito pelo usuário
+        id_lugar: Chave secundária
+        id_pessoa: Chave secundária
 
-      [Tabela - Imagem] - Armazena todas as imagens do sistema
-      id_imagem: Atributo identificador da tabela 
-      path: Campo que armazena o caminho da imagem
-      descricao: Campo que armazena a descrição da imagem
+    [Tabela - Imagem] - Armazena todas as imagens do sistema
+        id_imagem: Atributo identificador da tabela 
+        path: Campo que armazena o caminho da imagem
+        descricao: Campo que armazena a descrição da imagem
 
-      [Tabela - Categoria] - Armazena todas as categorias dos lugares
-      id_categoria: Atributo identificador da tabela
-      descricao: Campo que armazena a descrição da categoria
-      nome_categoria: Campo que armazena o nome da categoria
-      id_pessoa: Chave secundária
+    [Tabela - Categoria] - Armazena todas as categorias dos lugares
+        id_categoria: Atributo identificador da tabela
+        descricao: Campo que armazena a descrição da categoria
+        nome_categoria: Campo que armazena o nome da categoria
+        id_pessoa: Chave secundária
 
-      [Tabela - Lugar] - Armazena todos os lugares do sistema
-      long: Campo que armazena a longitude do lugar
-      id_lugar: Atributo identificador da tabela
-      lat: Campo que armazena a latitudo do lugar
-      descricao: Campo que armazena a descricao do lugar
-      nome_lugar: Campo que armazena o nome do lugar
-      id_pessoa: Chave secundária
-      id_categoria: Chave secundária
+    [Tabela - Lugar] - Armazena todos os lugares do sistema
+        long: Campo que armazena a longitude do lugar
+        id_lugar: Atributo identificador da tabela
+        lat: Campo que armazena a latitudo do lugar
+        descricao: Campo que armazena a descricao do lugar
+        nome_lugar: Campo que armazena o nome do lugar
+        id_pessoa: Chave secundária
+        id_categoria: Chave secundária
 
-      [Tabela - Avaliacao] - Armazena todas as avaliações dos usuários
-      id_avaliacao: Atributo identificador da tabela
-      nota: Campo que armazena a nota dada pelo usuário
-      comentario: Campo que armazena o comentário feito pelo usuário
-      id_lugar: Chave secundária
-      id_pessoa: Chave secundaria
+    [Tabela - Avaliacao] - Armazena todas as avaliações dos usuários
+        id_avaliacao: Atributo identificador da tabela
+        nota: Campo que armazena a nota dada pelo usuário
+        comentario: Campo que armazena o comentário feito pelo usuário
+        id_lugar: Chave secundária
+        id_pessoa: Chave secundaria
 
-      [Tabela - Pessoa] - Armazena os dados das pessoas que usam o sistema
-      cep: Campo que armazena o CEP do usuário
-      bairro: Campo que armazena o bairro do usuário
-      cidade: Campo que armazena o cidade do usuário
-      estado: Campo que armazena o estado do usuário
-      rua: Campo que armazena o rua do usuário
-      numero: Campo que armazena o numero do usuário
-      id_pessoa: Atributo identificador da tabela
-      email: Campo que armazena o CEP do usuário
-      colaboracao: Campo quantos lugares o usuário ajudou a identificar como verdadeiro
-      autenticidade: Campo quantos lugares o usuário identificou como verdade e realmente é verdade
-      senha: Campo que armazena a senha do usuário
-      login: Campo que armazena o login do usuário
-      ativo: Campo que diz se o usuário está ativo ou não
-      nome_pessoa: Campo que armazena o nome do usuário
-      id_imagem_pessoa: Chave secundária
+    [Tabela - Pessoa] - Armazena os dados das pessoas que usam o sistema
+        cep: Campo que armazena o CEP do usuário
+        bairro: Campo que armazena o bairro do usuário
+        cidade: Campo que armazena o cidade do usuário
+        estado: Campo que armazena o estado do usuário
+        rua: Campo que armazena o rua do usuário
+        numero: Campo que armazena o numero do usuário
+        id_pessoa: Atributo identificador da tabela
+        email: Campo que armazena o CEP do usuário
+        colaboracao: Campo quantos lugares o usuário ajudou a identificar como verdadeiro
+        autenticidade: Campo quantos lugares o usuário identificou como verdade e realmente é verdade
+        senha: Campo que armazena a senha do usuário
+        login: Campo que armazena o login do usuário
+        ativo: Campo que diz se o usuário está ativo ou não
+        nome_pessoa: Campo que armazena o nome do usuário
+        id_imagem_pessoa: Chave secundária
 
-      [Tabela - ImagemPessoa] - Armazena o atributo identificador de pessoa e o atributo identificador dessa imagem relacionado a pessoa
-      id_imagem_pessoa: Atributo identificador
-      id_imagem: Chave secundária
+    [Tabela - ImagemPessoa] - Armazena o atributo identificador de pessoa e o atributo identificador dessa imagem relacionado a pessoa
+        id_imagem_pessoa: Atributo identificador
+        id_imagem: Chave secundária
 
-      [Tabela - ImagemCategoria] - Armazena o atributo identificador de categoria e o atributo identificador dessa imagem relacionado a categoria
-      id_imagem_categoria: Atributo identificador
-      id_imagem INTEGER: Chave secundária
-      id_categoria INTEGER: Chave secundária
+    [Tabela - ImagemCategoria] - Armazena o atributo identificador de categoria e o atributo identificador dessa imagem relacionado a categoria
+        id_imagem_categoria: Atributo identificador
+        id_imagem INTEGER: Chave secundária
+        id_categoria INTEGER: Chave secundária
 
-      [Tabela - ImagemLugar] - Armazena o atributo identificador de Lugar e o atributo identificador dessa imagem relacionado a Lugar
-      id_imagem_lugar: Atributo identificador
-      id_imagem: Chave secundária
-      id_lugar: Chave secundária
+    [Tabela - ImagemLugar] - Armazena o atributo identificador de Lugar e o atributo identificador dessa imagem relacionado a Lugar
+        id_imagem_lugar: Atributo identificador
+        id_imagem: Chave secundária
+        id_lugar: Chave secundária
 
-      [Tabela -  ImagemPostagem] - Armazena o atributo identificador de Postagem e o atributo identificador dessa imagem relacionado a Postagem
-      id_imagem_postagem: Atributo identificador
-      id_imagem: Chave secundária
-      id_postagem: Chave secundária
+    [Tabela -  ImagemPostagem] - Armazena o atributo identificador de Postagem e o atributo identificador dessa imagem relacionado a Postagem
+        id_imagem_postagem: Atributo identificador
+        id_imagem: Chave secundária
+        id_postagem: Chave secundária
 ### 6	MODELO LÓGICO<br>
 ![Alt text](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/logico.jpg?raw=true "Modelo Lógico")
 ### 7	MODELO FÍSICO<br>
     CREATE TABLE Imagem (
-    id_imagem INTEGER PRIMARY KEY NOT NULL,
-    path VARCHAR(256) NOT NULL,
-    descricao VARCHAR(256) NOT NULL
+        id_imagem INTEGER PRIMARY KEY NOT NULL,
+        path VARCHAR(256) NOT NULL,
+        descricao VARCHAR(256) NOT NULL
     );
 
     CREATE TABLE ImagemPessoa (
-    id_imagem_pessoa INTEGER PRIMARY KEY NOT NULL,
-    id_imagem INTEGER NOT NULL,
-    CONSTRAINT FK_id_imagem FOREIGN KEY(id_imagem) REFERENCES Imagem (id_imagem)
+        id_imagem_pessoa INTEGER PRIMARY KEY NOT NULL,
+        id_imagem INTEGER NOT NULL,
+        CONSTRAINT FK_id_imagem FOREIGN KEY(id_imagem) REFERENCES Imagem (id_imagem)
     );
 
     CREATE TABLE Pessoa (
-    cep VARCHAR(8) NOT NULL CONSTRAINT proper_cep CHECK (cep ~* '^[0-9]{2}.[0-9]{3}-[0-9]{3}$'),
-    bairro VARCHAR(100) NOT NULL,
-    cidade VARCHAR(100) NOT NULL,
-    estado VARCHAR(100) NOT NULL,
-    rua VARCHAR(100) NOT NULL,
-    numero VARCHAR(5) NOT NULL,
-    id_pessoa INTEGER PRIMARY KEY NOT NULL,
-    email VARCHAR(255) NOT NULL CONSTRAINT proper_email CHECK (email ~* '^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+[.][A-Za-z]+$'),
-    colaboracao INTEGER NOT NULL,
-    autenticidade INTEGER NOT NULL,
-    senha VARCHAR(20) NOT NULL,
-    login VARCHAR(20) NOT NULL,
-    ativo CHAR(1) NOT NULL,
-    nome_pessoa VARCHAR(255) NOT NULL,
-    id_imagem_pessoa INTEGER NOT NULL,
-    CONSTRAINT FK_id_imagem_pessoa FOREIGN KEY(id_imagem_pessoa) REFERENCES ImagemPessoa (id_imagem_pessoa)
+        cep VARCHAR(8) NOT NULL CONSTRAINT proper_cep CHECK (cep ~* '^[0-9]{2}.[0-9]{3}-[0-9]{3}$'),
+        bairro VARCHAR(100) NOT NULL,
+        cidade VARCHAR(100) NOT NULL,
+        estado VARCHAR(100) NOT NULL,
+        rua VARCHAR(100) NOT NULL,
+        numero VARCHAR(5) NOT NULL,
+        id_pessoa INTEGER PRIMARY KEY NOT NULL,
+        email VARCHAR(255) NOT NULL CONSTRAINT proper_email CHECK (email ~* '^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+[.][A-Za-z]+$'),
+        colaboracao INTEGER NOT NULL,
+        autenticidade INTEGER NOT NULL,
+        senha VARCHAR(20) NOT NULL,
+        login VARCHAR(20) NOT NULL,
+        ativo CHAR(1) NOT NULL,
+        nome_pessoa VARCHAR(255) NOT NULL,
+        id_imagem_pessoa INTEGER NOT NULL,
+        CONSTRAINT FK_id_imagem_pessoa FOREIGN KEY(id_imagem_pessoa) REFERENCES ImagemPessoa (id_imagem_pessoa)
     );
 
     CREATE TABLE Categoria (
-    id_categoria INTEGER PRIMARY KEY NOT NULL,
-    descricao VARCHAR(256) NOT NULL,
-    nome_categoria VARCHAR(256) NOT NULL,
-    id_pessoa INTEGER NOT NULL,
-    CONSTRAINT FK_id_pessoa FOREIGN KEY(id_pessoa) REFERENCES Pessoa (id_pessoa)
+        id_categoria INTEGER PRIMARY KEY NOT NULL,
+        descricao VARCHAR(256) NOT NULL,
+        nome_categoria VARCHAR(256) NOT NULL,
+        id_pessoa INTEGER NOT NULL,
+        CONSTRAINT FK_id_pessoa FOREIGN KEY(id_pessoa) REFERENCES Pessoa (id_pessoa)
     );
 
     CREATE TABLE ImagemCategoria (
-    id_imagem_categoria INTEGER PRIMARY KEY NOT NULL,
-    id_imagem INTEGER NOT NULL,
-    id_categoria INTEGER NOT NULL,
-    CONSTRAINT FK_id_imagem FOREIGN KEY(id_imagem) REFERENCES Imagem (id_imagem),
-    CONSTRAINT FK_id_categoria FOREIGN KEY(id_categoria) REFERENCES Categoria (id_categoria)
+        id_imagem_categoria INTEGER PRIMARY KEY NOT NULL,
+        id_imagem INTEGER NOT NULL,
+        id_categoria INTEGER NOT NULL,
+        CONSTRAINT FK_id_imagem FOREIGN KEY(id_imagem) REFERENCES Imagem (id_imagem),
+        CONSTRAINT FK_id_categoria FOREIGN KEY(id_categoria) REFERENCES Categoria (id_categoria)
     );
 
     CREATE TABLE Lugar (
-    long DECIMAL(10) NOT NULL,
-    id_lugar INTEGER PRIMARY KEY NOT NULL,
-    lat DECIMAL(10) NOT NULL,
-    descricao VARCHAR(256) NOT NULL,
-    nome_lugar VARCHAR(256) NOT NULL,
-    id_pessoa INTEGER NOT NULL,
-    id_categoria INTEGER NOT NULL,
-    CONSTRAINT FK_id_pessoa FOREIGN KEY(id_pessoa) REFERENCES Pessoa (id_pessoa),
-    CONSTRAINT FK_id_categoria FOREIGN KEY(id_categoria) REFERENCES Categoria (id_categoria)
+        long DECIMAL(10) NOT NULL,
+        id_lugar INTEGER PRIMARY KEY NOT NULL,
+        lat DECIMAL(10) NOT NULL,
+        descricao VARCHAR(256) NOT NULL,
+        nome_lugar VARCHAR(256) NOT NULL,
+        id_pessoa INTEGER NOT NULL,
+        id_categoria INTEGER NOT NULL,
+        CONSTRAINT FK_id_pessoa FOREIGN KEY(id_pessoa) REFERENCES Pessoa (id_pessoa),
+        CONSTRAINT FK_id_categoria FOREIGN KEY(id_categoria) REFERENCES Categoria (id_categoria)
     );
 
     CREATE TABLE ImagemLugar (
-    id_imagem_lugar INTEGER PRIMARY KEY NOT NULL,
-    id_imagem INTEGER NOT NULL,
-    id_lugar INTEGER NOT NULL,
-    CONSTRAINT FK_id_imagem FOREIGN KEY(id_imagem) REFERENCES Imagem (id_imagem),
-    CONSTRAINT FK_id_lugar FOREIGN KEY(id_lugar) REFERENCES Lugar (id_lugar)
+        id_imagem_lugar INTEGER PRIMARY KEY NOT NULL,
+        id_imagem INTEGER NOT NULL,
+        id_lugar INTEGER NOT NULL,
+        CONSTRAINT FK_id_imagem FOREIGN KEY(id_imagem) REFERENCES Imagem (id_imagem),
+        CONSTRAINT FK_id_lugar FOREIGN KEY(id_lugar) REFERENCES Lugar (id_lugar)
     );
 
     CREATE TABLE Postagem (
-    data DATE NOT NULL,
-    id_postagem INTEGER PRIMARY KEY NOT NULL,
-    postagem TEXT,
-    id_lugar INTEGER NOT NULL,
-    id_pessoa INTEGER NOT NULL,
-    CONSTRAINT FK_id_lugar FOREIGN KEY(id_lugar) REFERENCES Lugar (id_lugar),
-    CONSTRAINT FK_id_pessoa FOREIGN KEY(id_pessoa) REFERENCES Pessoa (id_pessoa)
+        data DATE NOT NULL,
+        id_postagem INTEGER PRIMARY KEY NOT NULL,
+        postagem TEXT,
+        id_lugar INTEGER NOT NULL,
+        id_pessoa INTEGER NOT NULL,
+        CONSTRAINT FK_id_lugar FOREIGN KEY(id_lugar) REFERENCES Lugar (id_lugar),
+        CONSTRAINT FK_id_pessoa FOREIGN KEY(id_pessoa) REFERENCES Pessoa (id_pessoa)
     );
 
     CREATE TABLE ImagemPostagem (
-    id_imagem_postagem INTEGER PRIMARY KEY NOT NULL,
-    id_imagem INTEGER NOT NULL,
-    id_postagem INTEGER NOT NULL,
-    CONSTRAINT FK_id_imagem FOREIGN KEY(id_imagem) REFERENCES Imagem (id_imagem),
-    CONSTRAINT FK_id_postagem FOREIGN KEY(id_postagem) REFERENCES Postagem (id_postagem)
+        id_imagem_postagem INTEGER PRIMARY KEY NOT NULL,
+        id_imagem INTEGER NOT NULL,
+        id_postagem INTEGER NOT NULL,
+        CONSTRAINT FK_id_imagem FOREIGN KEY(id_imagem) REFERENCES Imagem (id_imagem),
+        CONSTRAINT FK_id_postagem FOREIGN KEY(id_postagem) REFERENCES Postagem (id_postagem)
     );
 
     CREATE TABLE Cometarios (
-    id_comentario INTEGER PRIMARY KEY NOT NULL,
-    texto TEXT NOT NULL,
-    id_postagem INTEGER NOT NULL,
-    id_pessoa INTEGER NOT NULL,
-    CONSTRAINT FK_id_postagem FOREIGN KEY(id_postagem) REFERENCES Postagem (id_postagem),
-    CONSTRAINT FK_id_pessoa FOREIGN KEY(id_pessoa) REFERENCES Pessoa (id_pessoa)
+        id_comentario INTEGER PRIMARY KEY NOT NULL,
+        texto TEXT NOT NULL,
+        id_postagem INTEGER NOT NULL,
+        id_pessoa INTEGER NOT NULL,
+        CONSTRAINT FK_id_postagem FOREIGN KEY(id_postagem) REFERENCES Postagem (id_postagem),
+        CONSTRAINT FK_id_pessoa FOREIGN KEY(id_pessoa) REFERENCES Pessoa (id_pessoa)
     );
 
     CREATE TABLE Avaliacao (
-    id_avaliacao INTEGER PRIMARY KEY NOT NULL,
-    nota INTEGER NOT NULL CHECK (nota >= 1 and nota <=5),
-    comentario TEXT NOT NULL,
-    id_pessoa INTEGER NOT NULL,
-    id_lugar INTEGER NOT NULL,
-    CONSTRAINT FK_id_pessoa FOREIGN KEY(id_pessoa) REFERENCES Pessoa (id_pessoa),
-    CONSTRAINT FK_id_lugar FOREIGN KEY(id_lugar) REFERENCES Lugar (id_lugar)
+        id_avaliacao INTEGER PRIMARY KEY NOT NULL,
+        nota INTEGER NOT NULL CHECK (nota >= 1 and nota <=5),
+        comentario TEXT NOT NULL,
+        id_pessoa INTEGER NOT NULL,
+        id_lugar INTEGER NOT NULL,
+        CONSTRAINT FK_id_pessoa FOREIGN KEY(id_pessoa) REFERENCES Pessoa (id_pessoa),
+        CONSTRAINT FK_id_lugar FOREIGN KEY(id_lugar) REFERENCES Lugar (id_lugar)
     );
     
 ### 8	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
