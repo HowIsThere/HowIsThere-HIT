@@ -282,6 +282,40 @@ OBS: Incluir para os tópicos 9.2 e 9.3 as instruções SQL + imagens (print da 
 
 #### 9.2	SELECT DAS TABELAS COM PRIMEIROS 10 REGISTROS INSERIDOS <br> 
     Data de Entrega: (Data a ser definida)
+
+    SELECT * FROM imagem LIMIT 10 
+![alt tag](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/Imagens-Select/select%20Imagem.png)<br>
+
+    SELECT * FROM avaliacao LIMIT 10 
+![alt tag](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/Imagens-Select/select%20avaliacao.png)<br>
+
+    SELECT * FROM categoria LIMIT 10 
+![alt tag](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/Imagens-Select/select%20categoria.png)<br>
+
+    SELECT * FROM comentarios LIMIT 10 
+![alt tag](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/Imagens-Select/select%20comentarios.png)<br>
+
+    SELECT * FROM imagemcategoria LIMIT 10 
+![alt tag](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/Imagens-Select/select%20imagemcategoria.png)<br>
+
+    SELECT * FROM imagemlugar LIMIT 10 
+![alt tag](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/Imagens-Select/select%20imagemlugar.png)<br>
+
+    SELECT * FROM imagempessoa LIMIT 10 
+![alt tag](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/Imagens-Select/select%20imagempessoa.png)<br>
+
+    SELECT * FROM imagempostagem LIMIT 10 
+![alt tag](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/Imagens-Select/select%20imagempostagem.png)<br>
+
+    SELECT * FROM lugar LIMIT 10 
+![alt tag](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/Imagens-Select/select%20lugar.png)<br>
+
+    SELECT * FROM pessoa LIMIT 10 
+![alt tag](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/Imagens-Select/select%20pessoa.png)<br>
+
+    SELECT * FROM postagem LIMIT 10 
+![alt tag](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/Imagens-Select/select%20postagem.png)<br>
+  
 <br>
 
 #### 9.3	SELECT DAS VISÕES COM PRIMEIROS 10 REGISTROS DA VIEW <br>
