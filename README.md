@@ -255,9 +255,14 @@ Rascunhos de interface em formato .PDF navegável disponível em:<br>
 #### 8.1 DETALHAMENTO DAS INFORMAÇÕES
         Detalhamento sobre as informações e processo de obtenção ou geração dos dados.
         Referenciar todas as fontes referentes a:
-        a) obtenção dos dados
+        
+        a) obtenção dos dados 
+        Dados para preenchimento de informações de lugares obtidos em <https://www.google.com.br/maps>
+        
         b) obtenção de códigos reutilizados
+        
         c) fontes de estudo para desenvolvimento do projeto
+        Foram utilizados materiais de aula disponibilizados pelo professor.
         
 #### 8.2 INCLUSÃO DO SCRIPT PARA CRIAÇÃO DE TABELAS E INSERÇÃO DOS DADOS (ARQUIVO ÚNICO COM):
         a) inclusão das instruções para criação das tabelas e estruturas de amazenamento do BD
