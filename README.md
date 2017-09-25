@@ -1,4 +1,4 @@
-# TRABALHO 01 : Título do trabalho
+# TRABALHO 01 : HowIsThere-HIT
 Trabalho desenvolvido durante a disciplina de BD
 
     O referido projeto poderá ser:
