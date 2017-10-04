@@ -52,7 +52,7 @@ Rascunhos de interface em formato .PDF navegável disponível em:<br>
 
 ### 5	MODELO CONCEITUAL<br>
 #### 5.1 NOTACAO ENTIDADE RELACIONAMENTO
-![Alt text](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/conceitual.jpg?raw=true "Modelo Conceitual")
+![Alt text](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/CONCEITUAL_HIT.png?raw=true "Modelo Conceitual")
     
      5.2 NOTACAO UML (Caso esteja fazendo a disciplina de Projeto)
 
@@ -142,7 +142,7 @@ Rascunhos de interface em formato .PDF navegável disponível em:<br>
         id_imagem: Chave secundária
         id_postagem: Chave secundária
 ### 6	MODELO LÓGICO<br>
-![Alt text](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/logico.jpg?raw=true "Modelo Lógico")
+![Alt text](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/LOGICO_HIT.png?raw=true "Modelo Lógico")
 ### 7	MODELO FÍSICO<br>
     
     CREATE TABLE Imagem (
