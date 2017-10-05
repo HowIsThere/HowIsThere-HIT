@@ -1,4 +1,4 @@
-/* Lógico_1: */
+/* LÃ³gico_1: */
 
 CREATE TABLE Lugar (
     latitude DECIMAL(10,5) NOT NULL,
@@ -29,7 +29,7 @@ CREATE TABLE Comentarios (
 CREATE TABLE Pessoa (
     colaboracao INT NOT NULL,
     id_pessoa  SERIAL PRIMARY KEY NOT NULL,
-    nome_pessoa VARCAHR(255) NOT NULL,
+    nome_pessoa VARCHAR(255) NOT NULL,
     ativo CHAR(1) NOT NULL,
     senha VARCHAR(20) NOT NULL,
     estado VARCHAR(100) NOT NULL,
