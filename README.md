@@ -122,25 +122,7 @@ Rascunhos de interface em formato .PDF navegável disponível em:<br>
         ativo: Campo que diz se o usuário está ativo ou não
         nome_pessoa: Campo que armazena o nome do usuário
         id_imagem_pessoa: Chave secundária
-
-    [Tabela - ImagemPessoa] - Armazena o atributo identificador de pessoa e o atributo identificador dessa imagem relacionado a pessoa
-        id_imagem_pessoa: Atributo identificador
-        id_imagem: Chave secundária
-
-    [Tabela - ImagemCategoria] - Armazena o atributo identificador de categoria e o atributo identificador dessa imagem relacionado a categoria
-        id_imagem_categoria: Atributo identificador
-        id_imagem INTEGER: Chave secundária
-        id_categoria INTEGER: Chave secundária
-
-    [Tabela - ImagemLugar] - Armazena o atributo identificador de Lugar e o atributo identificador dessa imagem relacionado a Lugar
-        id_imagem_lugar: Atributo identificador
-        id_imagem: Chave secundária
-        id_lugar: Chave secundária
-
-    [Tabela -  ImagemPostagem] - Armazena o atributo identificador de Postagem e o atributo identificador dessa imagem relacionado a Postagem
-        id_imagem_postagem: Atributo identificador
-        id_imagem: Chave secundária
-        id_postagem: Chave secundária
+        
 ### 6	MODELO LÓGICO<br>
 ![Alt text](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/LOGICO_HIT.png?raw=true "Modelo Lógico")
 ### 7	MODELO FÍSICO<br>
