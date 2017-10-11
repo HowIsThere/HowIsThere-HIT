@@ -105,11 +105,6 @@ ALTER TABLE Avaliacao ADD CONSTRAINT FK_Avaliacao_2
     REFERENCES Pessoa (id_pessoa)
     ON DELETE CASCADE ON UPDATE CASCADE;
  
-ALTER TABLE Comentarios ADD CONSTRAINT FK_Comentarios_1
-    FOREIGN KEY (FK_Pessoa_id_pessoa)
-    REFERENCES Pessoa (id_pessoa)
-    ON DELETE CASCADE ON UPDATE CASCADE;
- 
 ALTER TABLE Comentario_Postagem ADD CONSTRAINT FK_Comentario_Postagem_1
     FOREIGN KEY (FK_Pessoa_id_pessoa)
     REFERENCES Pessoa (id_pessoa)
