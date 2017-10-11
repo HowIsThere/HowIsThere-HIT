@@ -4,7 +4,7 @@ CREATE TABLE Lugar (
     latitude DECIMAL(10,5) NOT NULL,
     nome_lugar VARCHAR(256) NOT NULL,
     id_lugar SERIAL PRIMARY KEY NOT NULL,
-    descricao VARCHAR(256) NOT NULL,
+    descricao TEXT NOT NULL,
     longitude DECIMAL(10,5) NOT NULL,
     FK_Categoria_id_categoria SERIAL,
     FK_Pessoa_id_pessoa SERIAL,
@@ -19,8 +19,8 @@ CREATE TABLE Avaliacao (
     FK_Pessoa_id_pessoa SERIAL
 );
 
-CREATE TABLE Comentarios (
-    id_comentario SERIAL PRIMARY KEY NOT NULL,
+CREATE TABLE Comentario_Postagem (
+    id_comentario_postagem SERIAL PRIMARY KEY NOT NULL,
     texto TEXT NOT NULL,
     FK_Pessoa_id_pessoa SERIAL,
     FK_Postagem_id_postagem SERIAL
@@ -73,7 +73,13 @@ CREATE TABLE Tipo_Imagem (
     id_tipo_imagem SERIAL PRIMARY KEY NOT NULL,
     nome_tipo VARCHAR(50) NOT NULL
 );
- 
+
+CREATE TABLE Comentario_Avaliacao (
+    id_comentario_avaliacao SERIAL PRIMARY KEY NOT NULL,
+    texto TEXT,
+    FK_Avaliacao_id_avaliacao SERIAL
+);
+
 ALTER TABLE Lugar ADD CONSTRAINT FK_Lugar_1
     FOREIGN KEY (FK_Categoria_id_categoria)
     REFERENCES Categoria (id_categoria)
@@ -104,7 +110,12 @@ ALTER TABLE Comentarios ADD CONSTRAINT FK_Comentarios_1
     REFERENCES Pessoa (id_pessoa)
     ON DELETE CASCADE ON UPDATE CASCADE;
  
-ALTER TABLE Comentarios ADD CONSTRAINT FK_Comentarios_2
+ALTER TABLE Comentario_Postagem ADD CONSTRAINT FK_Comentario_Postagem_1
+    FOREIGN KEY (FK_Pessoa_id_pessoa)
+    REFERENCES Pessoa (id_pessoa)
+    ON DELETE CASCADE ON UPDATE CASCADE;
+ 
+ALTER TABLE Comentario_Postagem ADD CONSTRAINT FK_Comentario_Postagem_2
     FOREIGN KEY (FK_Postagem_id_postagem)
     REFERENCES Postagem (id_postagem)
     ON DELETE CASCADE ON UPDATE CASCADE;
@@ -143,3 +154,8 @@ ALTER TABLE Imagem ADD CONSTRAINT FK_Imagem_1
     FOREIGN KEY (FK_Tipo_Imagem_id_tipo_imagem)
     REFERENCES Tipo_Imagem (id_tipo_imagem)
     ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+ALTER TABLE Comentario_Avaliacao ADD CONSTRAINT FK_Comentario_Avaliacao_1
+    FOREIGN KEY (FK_Avaliacao_id_avaliacao)
+    REFERENCES Avaliacao (id_avaliacao)
+    ON DELETE CASCADE ON UPDATE CASCADE;
