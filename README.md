@@ -66,7 +66,7 @@ Rascunhos de interface em formato .PDF navegável disponível em:<br>
 
 #### 5.4 DESCRIÇÃO DOS DADOS 
 
-    [Tabela - Cometarios]: Armazena todos os comentários feitos pelos usuários
+    [Tabela - Cometario_Postagem]: Armazena todos os comentários feitos pelos usuários
         id_comentario: Atributo identificador da tabela
         texto: Armazena o texto escrito pelo usuário
         id_postagem: Chave secundária
@@ -122,6 +122,20 @@ Rascunhos de interface em formato .PDF navegável disponível em:<br>
         ativo: Campo que diz se o usuário está ativo ou não
         nome_pessoa: Campo que armazena o nome do usuário
         id_imagem_pessoa: Chave secundária
+        
+    [Tabela - Tipo_Imagem] - Armazena o tipo da imagem
+        id_tipo_imagem: Chave primaria da tabela
+        nome_tipo: Campo que armazena o tipo da imagem
+    
+    [Tabela - Comentario_Avaliacao] - Armazena os comentarios de cada avaliacao
+        id_comentario_avaliacao: Chave primaria da tabela
+        texto: Campo que armazena o comentario do usuário
+        FK_Avaliacao_id_avaliacao: Chave secundária
+       
+
+    [Tabela - Imagem_postagem] - Responsável 
+        FK_Imagem_id_imagem SERIAL: Chave primaria
+        FK_Postagem_id_postagem: Chave secundária
         
 ### 6	MODELO LÓGICO<br>
 ![Alt text](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/LOGICO_HIT.png?raw=true "Modelo Lógico")
