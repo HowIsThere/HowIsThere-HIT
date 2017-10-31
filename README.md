@@ -322,7 +322,7 @@ Rascunhos de interface em formato .PDF navegável disponível em:<br>
         c) inclusão das instruções para execução de outros procedimentos necessários
         
    O arquivo com o script para criação de tabelas e inserção dos dados está disponível em:<br>
-   ![Alt text](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Postgres-HIT/criacaoBDHIT.sql)
+   ![Alt text](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Postgres-HIT/HIT_BD_v2.sql)
 
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
 #### 9.1	GERACAO DE DADOS (MÍNIMO DE 1,5 MILHÃO DE REGISTROS PARA PRINCIPAL RELAÇAO)<br>
