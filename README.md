@@ -324,54 +324,53 @@ Rascunhos de interface em formato .PDF navegável disponível em:<br>
    ![Alt text](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Postgres-HIT/HIT_BD_v2.sql)
 
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
-#### 9.1	GERACAO DE DADOS (MÍNIMO DE 1,5 MILHÃO DE REGISTROS PARA PRINCIPAL RELAÇAO)<br>
+#### 9.1	GERACAO DE DADOS (MÍNIMO DE 10 REGISTROS PARA CADA TABELA NO BANCO DE DADOS)<br>
 
-Para ver ![Clique aqui](https://github.com/HowIsThere/HowIsThere-HIT/tree/master/GeraDadosAleatorios)
+Disponível em: ![Clique aqui](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Postgres-HIT/HIT_BD_v2.sql)
 
-<br>
+
 OBS: Incluir para os tópicos 9.2 e 9.3 as instruções SQL + imagens (print da tela) mostrando os resultados.<br>
 
 #### 9.2	SELECT DAS TABELAS COM PRIMEIROS 10 REGISTROS INSERIDOS <br> 
     Data de Entrega: (Data a ser definida)
 
     SELECT * FROM imagem LIMIT 10 
-![alt tag](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/Imagens-Select/select%20Imagem.png)<br>
+![alt tag](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/Imagens-Select/V2/select%20Imagem.png)<br>
+
+    SELECT * FROM imagem_postagem LIMIT 10
+![alt tag](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/Imagens-Select/V2/select%20Imagem_postagem.png)<br>
 
     SELECT * FROM avaliacao LIMIT 10 
-![alt tag](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/Imagens-Select/select%20avaliacao.png)<br>
+![alt tag](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/Imagens-Select/V2/select%20avaliacao.png)<br>
 
     SELECT * FROM categoria LIMIT 10 
-![alt tag](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/Imagens-Select/select%20categoria.png)<br>
+![alt tag](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/Imagens-Select/V2/select%20categoria.png)<br>
 
-    SELECT * FROM comentarios LIMIT 10 
-![alt tag](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/Imagens-Select/select%20comentarios.png)<br>
+    SELECT * FROM comentario_avaliacao LIMIT 10 
+![alt tag](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/Imagens-Select/V2/select%20comentario_avaliacao.png)<br>
 
-    SELECT * FROM imagemcategoria LIMIT 10 
-![alt tag](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/Imagens-Select/select%20imagemcategoria.png)<br>
-
-    SELECT * FROM imagemlugar LIMIT 10 
-![alt tag](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/Imagens-Select/select%20imagemlugar.png)<br>
-
-    SELECT * FROM imagempessoa LIMIT 10 
-![alt tag](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/Imagens-Select/select%20imagempessoa.png)<br>
-
-    SELECT * FROM imagempostagem LIMIT 10 
-![alt tag](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/Imagens-Select/select%20imagempostagem.png)<br>
+    SELECT * FROM comentario_postagem LIMIT 10 
+![alt tag](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/Imagens-Select/V2/select%20comentario_postagem.png)<br>
 
     SELECT * FROM lugar LIMIT 10 
-![alt tag](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/Imagens-Select/select%20lugar.png)<br>
+![alt tag](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/Imagens-Select/V2/select%20lugar.png)<br>
 
     SELECT * FROM pessoa LIMIT 10 
-![alt tag](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/Imagens-Select/select%20pessoa.png)<br>
+![alt tag](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/Imagens-Select/V2/select%20pessoa.png)<br>
 
     SELECT * FROM postagem LIMIT 10 
-![alt tag](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/Imagens-Select/select%20postagem.png)<br>
+![alt tag](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/Imagens-Select/V2/select%20postagem.png)<br>
+
+    SELECT * FROM tipo_imagem LIMIT 10 
+![alt tag](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/Imagens-Select/V2/select%20tipo_imagem.png)<br>
   
 <br>
 
 #### 9.3	SELECT DAS VISÕES COM PRIMEIROS 10 REGISTROS DA VIEW <br>
         a) Descrição da view sobre que grupos de usuários (operacional/estratégico) <br>
         e necessidade ela contempla.
+        b) Descrição das permissões de acesso e usuários correlacionados (após definição <br>
+        destas características)
         
    * view_categorias : A view contempla o acesso a atributos das tabelas categoria, imagemCategoria e imagem que são exibidos ao acessar as categorias do aplicativo, onde são exibidos o nome, a descrição e o path da imagem referente as categorias.<br>
         Criação:  
@@ -544,7 +543,20 @@ OBS: Incluir para os tópicos 9.2 e 9.3 as instruções SQL + imagens (print da 
         d) Plano com frequencia de análises visando otimização de performance
 <br>
 
-#### 9.6	Backup do Banco de Dados<br>
+#### 9.6	GERACAO DE DADOS (MÍNIMO DE 1,5 MILHÃO DE REGISTROS PARA PRINCIPAL RELAÇAO)
+        a) principal tabela do sistema deve ter no mínimo 1,5 milhão de registros
+        b) tabelas diretamente relacionadas a tabela principal 100 mil registros
+        c) tabelas auxiliares de relacao multivalorada mínimo de 10 registros
+        d) registrar o tempo de inserção em cada uma das tabelas do banco de dados
+        e) especificar a quantidade de registros inseridos em cada tabela
+        Para melhor compreensão verifiquem o exemplo na base de testes:<br>
+        https://github.com/discipbd2/base-de-testes-locadora
+
+Para ver ![Clique aqui](https://github.com/HowIsThere/HowIsThere-HIT/tree/master/GeraDadosAleatorios)
+
+<br>
+
+#### 9.7    Backup do Banco de Dados<br>
         Detalhamento do backup.
         a) Tempo
         b) Tamanho
@@ -557,7 +569,7 @@ OBS: Incluir para os tópicos 9.2 e 9.3 as instruções SQL + imagens (print da 
 Data de Entrega: (Data a ser definida)
 <br>
 
-#### 9.7	APLICAÇAO DE ÍNDICES E TESTES DE PERFORMANCE<br>
+#### 9.8	APLICAÇAO DE ÍNDICES E TESTES DE PERFORMANCE<br>
     a) Lista de índices, tipos de índices com explicação de porque foram implementados
     b) Performance esperada VS Resultados obtidos
     c) Tabela de resultados comparando velocidades antes e depois da aplicação dos índices.
@@ -565,7 +577,7 @@ Data de Entrega: (Data a ser definida)
     Data de Entrega: (Data a ser definida)
 <br>   
 
-#### 9.8	ANÁLISE DOS DADOS COM ORANGE<br>    
+#### 9.9	ANÁLISE DOS DADOS COM ORANGE<br>    
         a) captura das informaçõs
         b) integração com banco de dados em desenvolvimento
         c) aplicação de algoritmos e interpretação dos resultados
