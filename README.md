@@ -480,20 +480,20 @@ OBS: Incluir para os tópicos 9.2 e 9.3 as instruções SQL + imagens (print da 
    * TRIGGER NA TABELA PESSOA : A trigger tem como função evitar que seja criada várias contas com o mesmo e-mail.<br>
         Criação:    
         
-        CREATE OR REPLACE FUNCTION insert_existing_pessoa() RETURNS trigger AS $$
-            BEGIN
-                PERFORM 1 FROM pessoa WHERE email = NEW.email;
-                IF NOT FOUND THEN
-                    RETURN NEW;
-                ELSE
-                    RAISE EXCEPTION 'Já existe uma pessoa com esse e-mail registrada!';
-                END IF;
-            END $$ LANGUAGE plpgsql;
-            
-        CREATE TRIGGER a_insert_existing_pessoa BEFORE INSERT ON pessoa
-        FOR EACH ROW EXECUTE PROCEDURE insert_existing_pessoa();
+                CREATE OR REPLACE FUNCTION insert_existing_pessoa() RETURNS trigger AS $$
+                    BEGIN
+                        PERFORM 1 FROM pessoa WHERE email = NEW.email;
+                        IF NOT FOUND THEN
+                            RETURN NEW;
+                        ELSE
+                            RAISE EXCEPTION 'Já existe uma pessoa com esse e-mail registrada!';
+                        END IF;
+                    END $$ LANGUAGE plpgsql;
+
+                CREATE TRIGGER a_insert_existing_pessoa BEFORE INSERT ON pessoa
+                FOR EACH ROW EXECUTE PROCEDURE insert_existing_pessoa();
                     
-![alt tag](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/Imagens%20-%20Triggers/triggerPessoa.png)
+    ![alt tag](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/Imagens%20-%20Triggers/triggerPessoa.png)
      
        
 <br>
