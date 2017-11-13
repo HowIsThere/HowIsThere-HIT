@@ -495,8 +495,44 @@ OBS: Incluir para os tópicos 9.2 e 9.3 as instruções SQL + imagens (print da 
                 FOR EACH ROW EXECUTE PROCEDURE insert_existing_pessoa();
                     
 ![alt tag](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/Imagens%20-%20Triggers/triggerPessoa.png)
-     
-       
+
+   * TRIGGER NA TABELA LUGAR : A trigger tem como função evitar que seja criado vários lugares com o mesmo nome.<br>
+        Criação:  
+        
+            CREATE OR REPLACE FUNCTION insert_existing_lugar() RETURNS trigger AS $$
+                BEGIN
+                    PERFORM 1 FROM lugar WHERE nome_lugar = NEW.nome_lugar;
+                    IF NOT FOUND THEN
+                        RETURN NEW;
+                    ELSE
+                        RAISE EXCEPTION 'Já existe um lugar com esse nome registrado!';
+                    END IF;
+                END $$ LANGUAGE plpgsql;
+
+
+            CREATE TRIGGER a_insert_existing_lugar BEFORE INSERT ON lugar
+            FOR EACH ROW EXECUTE PROCEDURE insert_existing_lugar();
+
+ ![alt tag](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/Imagens%20-%20Triggers/triggerLugar.png)       
+
+   * TRIGGER NA TABELA CATEGORIA : A trigger tem como função evitar que seja criado várias categorias com o mesmo nome.<br>
+        Criação:
+        
+            CREATE OR REPLACE FUNCTION insert_existing_categoria() RETURNS trigger AS $$
+                BEGIN
+                    PERFORM 1 FROM categoria WHERE nome_categoria = NEW.nome_categoria;
+                    IF NOT FOUND THEN
+                        RETURN NEW;
+                    ELSE
+                        RAISE EXCEPTION 'Já existe uma categoria com esse nome registrado!';
+                    END IF;
+                END $$ LANGUAGE plpgsql;
+
+
+            CREATE TRIGGER a_insert_existing_categoria BEFORE INSERT ON categoria
+            FOR EACH ROW EXECUTE PROCEDURE insert_existing_categoria();
+![alt tag](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/Imagens%20-%20Triggers/triggerCategoria.png)
+
 <br>
 
 #### 9.5	Administração do banco de dados<br>
