@@ -326,7 +326,7 @@ Rascunhos de interface em formato .PDF navegável disponível em:<br>
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
 #### 9.1	GERACAO DE DADOS (MÍNIMO DE 1,5 MILHÃO DE REGISTROS PARA PRINCIPAL RELAÇAO)<br>
 
-![Alt text](https://github.com/HowIsThere/HowIsThere-HIT/tree/master/GeraDadosAleatorios)
+Para ver ![Clique aqui](https://github.com/HowIsThere/HowIsThere-HIT/tree/master/GeraDadosAleatorios)
 
 <br>
 OBS: Incluir para os tópicos 9.2 e 9.3 as instruções SQL + imagens (print da tela) mostrando os resultados.<br>
