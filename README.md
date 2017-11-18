@@ -372,87 +372,84 @@ OBS: Incluir para os tópicos 9.2 e 9.3 as instruções SQL + imagens (print da 
         b) Descrição das permissões de acesso e usuários correlacionados (após definição <br>
         destas características)
         
-   * view_categorias : A view contempla o acesso a atributos das tabelas categoria, imagemCategoria e imagem que são exibidos ao acessar as categorias do aplicativo, onde são exibidos o nome, a descrição e o path da imagem referente as categorias.<br>
+   * view_categorias : A view contempla o acesso a atributos das tabelas categoria e imagem que são exibidos ao acessar as categorias do aplicativo, onde são exibidos o nome, a descrição e o caminho da imagem referente as categorias.<br>
         Criação:  
         
-                    CREATE VIEW view_categorias AS
-                    SELECT nome_categoria, categoria.descricao, path
-                    FROM categoria
-                    INNER JOIN imagemcategoria
-                    ON (categoria.id_categoria = imagemcategoria.id_categoria)
-                    INNER JOIN imagem
-                    ON (imagem.id_imagem = imagemcategoria.id_imagem);
+                   CREATE VIEW view_categorias AS
+                   SELECT nome_categoria, C.descricao, caminho_imagem
+                   FROM categoria C
+                   INNER JOIN imagem I
+                   ON (C.fk_imagem_id_imagem = I.id_imagem);
         
         Select: 
         
-                    SELECT * FROM view_categorias LIMIT 10;
+                   SELECT * FROM view_categorias LIMIT 10;
                     
 ![alt tag](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/Imagens-Views/view_categorias.png)<br>
 
-   * view_lugares : A view contempla o acesso a atributos das tabelas lugar, imagemLugar, imagem e avaliacao que são exibidos ao acessar os lugares de determinada categoria do aplicativo, onde são apresentados o nome do lugar, avaliação geral quando possuir (obtida da média das avaliações individuais), imagem do lugar e a localização (latitude e longitude do lugar).<br>
+   * view_lugares : A view contempla o acesso a atributos das tabelas lugar, imagem e avaliacao que são exibidos ao acessar os lugares de determinada categoria do aplicativo, onde são apresentados o nome do lugar, avaliação geral quando possuir (obtida da média das avaliações individuais), comentário da avaliação, imagem do lugar e a localização (latitude e longitude do lugar).<br>
         Criação:    
         
-                    CREATE VIEW view_lugares AS
-                    SELECT nome_lugar, path, lat, long, AVG(nota) AS Nota
-                    FROM lugar
-                    INNER JOIN imagemlugar
-                    ON (lugar.id_lugar = imagemlugar.id_lugar)
-                    INNER JOIN imagem
-                    ON (imagem.id_imagem = imagemlugar.id_imagem)
-                    LEFT OUTER JOIN avaliacao
-                    on (avaliacao.id_lugar = lugar.id_lugar)
-                    WHERE lugar.id_categoria IN (
-                                                    SELECT id_categoria AS ID_Categoria
-                                                    FROM categoria
-                                                    WHERE id_categoria = 6
-                                                    )
-                    GROUP BY nome_lugar, path, lat, long;
+                   CREATE VIEW view_lugares AS
+                   SELECT nome_lugar, caminho_imagem, latitude, longitude, AVG(nota) AS Nota
+                   FROM lugar L
+                   INNER JOIN imagem I
+                   ON (L.fk_imagem_id_imagem = I.id_imagem)
+                   LEFT OUTER JOIN avaliacao A
+                   ON (A.fk_lugar_id_lugar = L.id_lugar)
+                   WHERE L.fk_categoria_id_categoria IN (
+                                                                select id_categoria as ID_Categoria
+                                                                from categoria
+                                                                where id_categoria = 6)
+                   GROUP BY nome_lugar, caminho_imagem, latitude, longitude;
                     
         Select: 
         
-                    SELECT * FROM view_lugares LIMIT 10;
+                   SELECT * FROM view_lugares LIMIT 10;
                     
 ![alt tag](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/Imagens-Views/view_lugares.png)<br>
 
-   * view_avaliacao_lugar : A view contempla o acesso a atributos das tabelas pessoa, imagemPessoa, imagem e avaliacao que são exibidos ao acessar um lugar e ser mostrada sua página de avaliações, onde são exibidos os comentários individuais, sendo compostos de nome da pessoa, imagem da pessoa, nota atribuída ao lugar pela pessoa e o comentário.<br>
+   * view_avaliacao_lugar : A view contempla o acesso a atributos das tabelas pessoa, imagem, avaliacao e comentario_avaliacao que são exibidos ao acessar um lugar e ser mostrada sua página de avaliações, onde são exibidos os comentários individuais, sendo compostos de nome da pessoa, imagem da pessoa, nota atribuída ao lugar pela pessoa e o comentário.<br>
         Criação:    
         
-                    CREATE VIEW view_avaliacao_lugar AS
-                    SELECT nome_pessoa, path, nota, comentario
-                    FROM pessoa
-                    INNER JOIN imagempessoa
-                    ON (pessoa.id_imagem_pessoa = imagempessoa.id_imagem_pessoa)
-                    INNER JOIN imagem
-                    ON (imagem.id_imagem = imagempessoa.id_imagem)
-                    INNER JOIN avaliacao
-                    ON (avaliacao.id_pessoa = pessoa.id_pessoa)
-                    WHERE avaliacao.id_lugar IN(
-                                                    select id_lugar as ID_Lugar
-                                                    from lugar
-                                                    where id_lugar = 1
-                                                    );
+                   CREATE VIEW view_avaliacao_lugar AS
+                   SELECT nome_pessoa, caminho_imagem, nota, texto
+                   FROM pessoa P
+                   INNER JOIN imagem I
+                   ON (P.fk_imagem_id_imagem = I.id_imagem)
+                   INNER JOIN avaliacao A
+                   ON (A.fk_pessoa_id_pessoa = P.id_pessoa)
+                   LEFT OUTER JOIN comentario_avaliacao CA
+                   ON (CA.fk_avaliacao_id_avaliacao = A.id_avaliacao)
+                   WHERE A.fk_lugar_id_lugar IN(
+                                                   select id_lugar as ID_Lugar
+                                                   from lugar
+                                                   where id_lugar = 1
+                                                   );
                                                     
         Select: 
         
-                    SELECT * FROM view_avaliacao_lugar LIMIT 10;
+                   SELECT * FROM view_avaliacao_lugar LIMIT 10;
                     
- ![alt tag](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/Imagens-Views/view_avaliacoes_lugar.png)<br>
+ ![alt tag](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/Imagens-Views/view_avaliacao_lugar.png)<br>
  
-    * view_timeline_lugar : A view contempla o acesso a atributos das tabelas pessoa, imagemPessoa, imagem, postagem e imagemPostagem que são exibidos ao acessar a timeline de um lugar, onde são exibidos informações de nome da pessoa, imagem da pessoa, postagem (texto e imagem quando houver) e data da postagem.<br>
+    * view_timeline_lugar: A view contempla o acesso a atributos das tabelas pessoa, imagemPessoa, imagem, postagem,  imagemPostagem e comentario_postagem que são exibidos ao acessar a timeline de um lugar, onde são exibidos informações de nome da pessoa, imagem da pessoa, postagem (texto e imagem quando houver) e data da postagem.<br>
         Criação:    
         
                     CREATE VIEW view_timeline_lugar AS
-                    SELECT nome_pessoa, path, postagem, id_imagem_postagem, data
-                    FROM postagem
-                    INNER JOIN pessoa
-                    ON (postagem.id_pessoa = pessoa.id_pessoa)
-                    INNER JOIN imagempessoa
-                    ON (pessoa.id_imagem_pessoa = imagempessoa.id_imagem_pessoa)
-                    INNER JOIN imagem
-                    ON (imagem.id_imagem = imagempessoa.id_imagem)
-                    LEFT OUTER JOIN imagempostagem
-                    ON (imagempostagem.id_postagem = postagem.id_postagem)
-                    WHERE postagem.id_lugar IN(
+                    SELECT nome_pessoa, caminho_imagem AS "Imagem Pessoa", PS.texto, 
+                    IP.fk_imagem_id_imagem AS "Imagem Postagem", data, 
+                    CP.texto AS "Comentarios"
+                    FROM postagem PS
+                    INNER JOIN pessoa P
+                    ON (PS.fk_pessoa_id_pessoa = P.id_pessoa)
+                    INNER JOIN imagem I
+                    ON (I.id_imagem = P.fk_imagem_id_imagem)
+                    LEFT OUTER JOIN imagem_postagem IP
+                    ON (IP.fk_postagem_id_postagem = PS.id_postagem)
+                    LEFT OUTER JOIN comentario_postagem CP
+                    ON (CP.fk_postagem_id_postagem = PS.id_postagem)
+                    WHERE PS.fk_lugar_id_lugar IN(
                                                     SELECT id_lugar AS ID_Lugar
                                                     FROM lugar
                                                     WHERE id_lugar = 8
