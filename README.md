@@ -551,6 +551,55 @@ OBS: Incluir para os tópicos 9.2 e 9.3 as instruções SQL + imagens (print da 
 
 Para ver ![Clique aqui](https://github.com/HowIsThere/HowIsThere-HIT/tree/master/GeraDadosAleatorios)
 
+* tabela categoria: 10 regisros
+* tabela tipo_imagem: 5 registros
+* tabela lugar: 10 registros
+* tabela imagem: 100.003 registros
+* tabela imagem_postagem: 100.000 registros
+* tabela pessoa: 100.000 registros
+* tabela postagem: 1.500.000 regisros<br>
+
+A criação de tabela e inclusão de dados foi realizada em um computaodr I7 com 4GB de Ram e Hd SATA de 1TB, utilizando-se do Windows 7
+
+#### Tempo de execução 
+
+"inicio do processo" 18:13:36<br>
+"final do processo" 18:27:58
+
+#### Estado do banco
+![alt tag](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/estado%20do%20banco.png)
+
+#### Tempo de execução para inserção na tabela tipo_imagem
+Start: 18:13:36<br>
+Finish: 18:13:42
+
+#### Tempo de execução para inserção na tabela imagem
+Start: 18:13:42<br>
+Finish: 18:15:05
+
+#### Tempo de execução para inserção na tabela pessoa
+Start: 18:15:05<br>
+Finish: 18:15:54
+
+#### Tempo de execução para inserção na tabela categoria
+Start: 18:15:54<br>
+Finish: 18:15:58
+
+
+#### Tempo de execução para inserção na tabela lugar
+Start: 18:15:58<br>
+Finish: 18:16:03
+
+
+### Tempo de execução para inserção na tabela postagem
+Start: 18:16:03<br>
+Finish: 18:26:46
+
+
+### Tempo de execução para inserção na tabela imagem_postagem
+Start: 18:26:46<br>
+Finish: 18:27:58
+
 <br>
 
 #### 9.7    Backup do Banco de Dados<br>
