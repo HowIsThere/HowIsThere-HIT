@@ -604,12 +604,12 @@ Finish: 18:27:58
 
 #### 9.7    Backup do Banco de Dados<br>
         Detalhamento do backup.
-        a) Tempo
-        b) Tamanho
-        c) Teste de restauração (backup)
-        d) Tempo para restauração
-        e) Teste de restauração (script sql)
-        f) Tempo para restauração (script sql)
+        a) Tempo: 13.253 segundos;
+        b) Tamanho: 207.604 KB;
+        c) Teste de restauração (backup): OK;
+        d) Tempo para restauração: 123.341 segundos;
+        e) Teste de restauração (script sql): ok;
+        f) Tempo para restauração (script sql): 52.955 segundos;
 <br>
 
 Data de Entrega: (Data a ser definida)
