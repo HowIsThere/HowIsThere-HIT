@@ -532,13 +532,34 @@ OBS: Incluir para os tópicos 9.2 e 9.3 as instruções SQL + imagens (print da 
 <br>
 
 #### 9.5	Administração do banco de dados<br>
-        Descrição detalhada sobre como serão executadas no banco de dados as <br>
-        seguintes atividades.
-        a) Segurança e autorização de acesso:
-        b) Estimativas de aquisição de recursos para armazenamento e processamento da informação
-        c) Planejamento de rotinas de manutenção e monitoramento do banco
-        d) Plano com frequencia de análises visando otimização de performance
-<br>
+Descrição detalhada sobre como serão executadas no banco de dados as seguintes atividades.
+
+    a) Segurança e autorização de acesso:
+        * Criamos os usuários para acesso as tabelas:
+        
+![alt tag](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/Imagens%20-%20seguranca/postgres_users.png)
+- Criamos os grupos e demos privilegios adequados aos mesmos: 
+
+        grant all privileges on database "HIT" to administrador, aplicacao
+        grant select, update on database "HIT" to usuario_comum
+        GRANT INSERT, DELETE ON comentario_avaliacao, comentario_postagem, imagem_postagem, postagem TO usuario_comum WITH GRANT OPTION;
+
+![alt tag](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/Imagens%20-%20seguranca/postgres_group.png)
+
+b) Estimativas de aquisição de recursos para armazenamento e processamento da informação
+
+Como o sistema é parecido com uma rede social, terá uma quantidade consideravel de inserções, consultas, ao fazer postagens e na hora de mostrar as postagens, e poucas deleções. O sistema pode inserir imagens, das postagens, categorias, imagens de perfil, lugar e categoria, com isso a configuração que sugerimos ser suficiente é:
+        
+        CPU - 4 CORE
+        RAM - 16 GB
+        HDD - 10 TB
+        
+c) Planejamento de rotinas de manutenção e monitoramento do banco
+
+As rotinas de manutenção serão executadas durante as segundas-feiras, após coletar os dados com o sistema, realizaremos o comando - analyze;
+        
+d) Plano com frequencia de análises visando otimização de performance
+
 
 #### 9.6	GERACAO DE DADOS (MÍNIMO DE 1,5 MILHÃO DE REGISTROS PARA PRINCIPAL RELAÇAO)
         a) principal tabela do sistema deve ter no mínimo 1,5 milhão de registros
@@ -616,10 +637,19 @@ Data de Entrega: (Data a ser definida)
 <br>
 
 #### 9.8	APLICAÇAO DE ÍNDICES E TESTES DE PERFORMANCE<br>
-    a) Lista de índices, tipos de índices com explicação de porque foram implementados
-    b) Performance esperada VS Resultados obtidos
-    c) Tabela de resultados comparando velocidades antes e depois da aplicação dos índices.
+a) Lista de índices, tipos de índices com explicação de porque foram implementados
+
+* idx_pessoa: Indice implementado para buscar as pessoas de acordo com a coluna id_pessoa, visto que consultas com base nesses valores serão realizadas para encontrar usuários.
+
+* idx_nome_pessoa:Indice implementado para buscar as pessoas de acordo com a coluna nome_pessoa, visto que consultas com base nesses valores serão utilizadas para encontrar usuários;
+
+* idx_postagem: Indice implementado para buscar as postagens de acordo com a coluna data, visto que consultas com base nesses valores serão utilizadas para encontrar postagens feitas em uma determinada data;
+    
+b) Performance esperada VS Resultados obtidos
+
+c) Tabela de resultados comparando velocidades antes e depois da aplicação dos índices.
 <br>
+
     Data de Entrega: (Data a ser definida)
 <br>   
 
