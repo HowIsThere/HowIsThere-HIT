@@ -650,6 +650,9 @@ a) Lista de índices, tipos de índices com explicação de porque foram impleme
 b) Performance esperada VS Resultados obtidos
 
 c) Tabela de resultados comparando velocidades antes e depois da aplicação dos índices.
+
+![alt tag](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/Imagens%20-%20seguranca/idx_pessoa_nomePessoa_tempo.png)
+
 <br>
 
     Data de Entrega: (Data a ser definida)
