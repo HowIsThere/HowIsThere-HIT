@@ -649,6 +649,8 @@ a) Lista de índices, tipos de índices com explicação de porque foram impleme
     
 b) Performance esperada VS Resultados obtidos
 
+Analizando os dados abaixo (item c) pode se notar que a aplicação de indices nas tabelas alcançou o resultado desejado, que era diminuir o tempo na realização das consultas nas principais tabelas. 
+    
 c) Tabela de resultados comparando velocidades antes e depois da aplicação dos índices.
 
 ![alt tag](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/Imagens%20-%20seguranca/idx_pessoa_nomePessoa_tempo.png)
