@@ -534,8 +534,10 @@ OBS: Incluir para os tópicos 9.2 e 9.3 as instruções SQL + imagens (print da 
 #### 9.5	Administração do banco de dados<br>
 Descrição detalhada sobre como serão executadas no banco de dados as seguintes atividades.
 
-    a) Segurança e autorização de acesso:
-        * Criamos os usuários para acesso as tabelas:
+ a) Segurança e autorização de acesso:
+ OBS.: Os usuarios comuns que serão os usuários diretos da aplicação terão o usuário no banco criado com o alias "usuario" concatenado com o seu CPF.
+ 
+ -Criamos os usuários para acesso as tabelas:
         
 ![alt tag](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/Imagens%20-%20seguranca/postgres_users.png)
 - Criamos os grupos e demos privilegios adequados aos mesmos: 
