@@ -653,7 +653,24 @@ Analizando os dados abaixo (item c) pode se notar que a aplicação de indices n
     
 c) Tabela de resultados comparando velocidades antes e depois da aplicação dos índices.
 
-![alt tag](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/Imagens%20-%20seguranca/idx_pessoa_nomePessoa_tempo.png)
+|Tabela (coluna)|Com Índice|Sem índice|
+|---|---|---|
+|pessoa (nome_pessoa)|294 msec|451 msec|
+|postagem (data)|91 msec|529 msec|
+
+* idx_nome_pessoa: 
+
+        Select * from pessoa where nome_pessoa = 'Amílcar Mendes';
+        
+![alt tag](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/Imagens%20-%20Indices/idx_pessoa_nomePessoa_Grafico.png)<br>
+![alt tag](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/Imagens%20-%20Indices/idx_pessoa_nomePessoa_Grafico_semIndice.png)
+
+* idx_postagem:
+
+        select * from postagem where data > '2016/01/01' and data < '2017/01/01';
+        
+![alt tag](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/Imagens%20-%20Indices/idx_postagem_Grafico.png)<br>
+![alt tag](https://github.com/HowIsThere/HowIsThere-HIT/blob/master/Imagens/Imagens%20-%20Indices/idx_postagem_Grafico_semIndice.png)
 
 <br>
 
